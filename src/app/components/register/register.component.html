@@ -1,0 +1,43 @@
+<ion-content class="padding">
+    <div class="log_div">
+      <img class="log_img" src="../../../assets/food.jpg" alt="">
+    </div>
+  
+    <ion-card class="log_card">
+      <ion-card-header>
+        <h4 class="log_header"> Create your Account</h4>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input class="log_input" type="text" placeholder="Username" required></ion-input>
+            <ion-icon name="person" class="formicons" class="font_clr"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-input class="log_input" type="email" placeholder="Email" required></ion-input>
+            <ion-icon name="mail" class="formicons" class="font_clr"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-input class="log_input" type="number" placeholder="Mobile number" required></ion-input>
+            <ion-icon name="call" class="formicons" class="font_clr"></ion-icon>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-input class="log_input" type="number" placeholder="Password" required></ion-input>
+            <ion-icon name="key" class="formicons" class="font_clr"></ion-icon>
+          </ion-item>
+  
+          <ion-item lines="none">
+            <ion-checkbox checked="true"></ion-checkbox>
+            <ion-label class="reg_agree">I agree the terms and condition</ion-label>
+          </ion-item>
+  
+          <ion-item lines="none">
+            <button ion-button class="signup_btn" routerLink="/dashboard">SignUp</button>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <div>
+      <p class="reg_info">Already have an Account <a routerLink="/signin" class="href_txt">Login here?</a></p>
+    </div>
+  </ion-content>

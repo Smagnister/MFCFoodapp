@@ -1,0 +1,84 @@
+<ion-content class="ion-padding">
+  <ion-row>
+    <img id="header" src="./../../../assets/loginimg.jpg">
+  </ion-row>
+  <ion-row class="ion-text-center item_row auth_row">
+    <ion-col class="login_col">
+      <div (click)="log=true; reg=false;">
+        Login
+      </div>
+    </ion-col>
+    <div class="vertical_line"></div>
+    <ion-col class="reg_col">
+      <div (click)="reg=true; log=false;">
+        Register
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div *ngIf="log" class="justify-content-center">
+    <ion-row id="login">
+      <!-- <ion-card class="input_card"> -->
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="item_div">
+              <ion-item lines="none">
+                <ion-icon ios="ios-call" md="md-call" class="font_clr"></ion-icon>
+                <ion-input class="input" name="mbenumber" type="number" placeholder="mobile number"></ion-input>
+              </ion-item>
+              <!-- <ion-item lines="none">
+                  <ion-icon ios="ios-key" md="md-key" class="font_clr"></ion-icon>
+                  <ion-input class="input" name="password" type="password" placeholder="password"> </ion-input>
+                </ion-item> -->
+            </div>
+            <div class="for_pwd">
+              <ion-label>Forget password ?</ion-label>
+            </div>
+            <div class="btn_div">
+              <!-- <button ion-button class="login_btn" size="medium" type="submit" expand="block" [routerLink]="['/verifyotp']">Login</button> -->
+              <img src="../../../assets/go_arrow.png" [routerLink]="['/verifyotp']"/>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- </ion-card> -->
+    </ion-row>
+  </div>
+
+  <div *ngIf="reg" class="justify-content-center">
+    <ion-row id="register">
+      <!-- <ion-card class="input_card"> -->
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="item_div">
+              <!-- <ion-item lines="none">
+                  <ion-icon ios="ios-person" md="md-person" class="font_clr"></ion-icon>
+                  <ion-input class="input" name="uname" type="text" placeholder="username"></ion-input>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-icon ios="ios-mail" md="md-mail" class="font_clr"></ion-icon>
+                  <ion-input class="input" name="email" type="email" placeholder="your@email.com"></ion-input>
+                </ion-item> -->
+              <ion-item lines="none">
+                <ion-icon ios="ios-call" md="md-call" class="font_clr"></ion-icon>
+                <ion-input class="input" name="mbenumber" type="number" placeholder="mobile number"></ion-input>
+              </ion-item>
+              <!-- <ion-item lines="none">
+                  <ion-icon ios="ios-key" md="md-key" class="font_clr"></ion-icon>
+                  <ion-input class="input" name="password" type="password" placeholder="password"> </ion-input>
+                </ion-item> -->
+            </div>
+            <div class="btn_div">
+              <!-- <button class="login_btn" size="medium" type="submit" expand="block">Register</button> -->
+
+              <img src="../../../assets/go_arrow.png" [routerLink]="['/verifyotp']"/>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- </ion-card> -->
+    </ion-row>
+  </div>
+</ion-content>

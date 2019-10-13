@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="flex_pro">
+      <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs/home']" slot="start" class="back_btn"></ion-icon>
+    <!-- <img src="../../../assets/back_arrow.png" class="back_btn" [routerLink]="'/tabs/home'"> -->
+    <ion-label class="verify">Profile</ion-label>
+  </div>
+  <div class="edit_div">
+    <img src="../../../assets/s4.jpg" class="pro_img">
+    <ion-icon name="create" class="edit_icon" (click)="updateProfilepic()"></ion-icon>
+  </div>
+
+  <div class="profile_design">
+    <ion-list lines="none" class="profile_list">
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="mail" class="num_icon"></ion-icon>
+          <ion-input placeholder="Email" type="email"></ion-input>
+        </div>
+      </ion-item>
+
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="person" class="num_icon"></ion-icon>
+          <ion-input placeholder="Username" type="text"></ion-input>
+        </div>
+      </ion-item>
+      
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="key" class="num_icon"></ion-icon>
+          <ion-input placeholder="Address" type="text"></ion-input>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="In_btn_div">
+    <Button ion-button class="In_btn" [routerLink]="['/verifyno']"> Proceed</Button>
+  </div>
+</ion-content>
+
+

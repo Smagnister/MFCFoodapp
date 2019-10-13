@@ -1,0 +1,36 @@
+<!-- <ion-header>
+  <img src="">
+</ion-header> -->
+<ion-content class="padding">
+  <h4 class="signin">Sign In Here</h4>
+  <div class="signin_design">
+    <ion-list>
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="call" class="num_icon"></ion-icon>
+          <ion-input placeholder="Mobile Number" type="number"></ion-input>
+        </div>
+      </ion-item>
+      <!-- <ion-item class="gap">
+          <div class="same_line">
+            <ion-icon name="key" class="num_icon"></ion-icon>
+            <ion-input placeholder="Password" type="password"></ion-input>
+          </div>
+        </ion-item> -->
+    </ion-list>
+
+    <div class="forget_pwd" [routerLink]="['/forgetpassword']"> forget password? </div>
+  
+  </div>
+
+  <div class="In_btn_div">
+    <Button ion-button class="In_btn" [routerLink]="['/enterotp']"> SignIn</Button>
+  </div>
+
+  <div>
+    <h4 class="nav_reg">Don't have an Account ? <a [routerLink]="['/signup']">Register here</a></h4>
+  </div>
+
+  
+
+</ion-content>

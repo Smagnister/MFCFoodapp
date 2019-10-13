@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="flex_pro">
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="back_btn"></ion-icon>
+    <!-- <img src="../../../assets/back_arrow.png" class="back_btn"> -->
+    <ion-label class="verify"> OTP Verification</ion-label>
+  </div>
+
+  <div>
+    <p class="num_info">Enter your otp code here</p>
+  </div>
+  <div>
+    <ion-item class="num_input">
+      <ion-list>
+        <ion-input type="number"></ion-input>
+      </ion-list>
+    </ion-item>
+  </div>
+  <!-- <div>
+    <p class="num_info">Don't you receive any code? </p>
+  </div> -->
+  <ion-row>
+    <ion-label class="resend_code">Resend Code
+    </ion-label>
+  </ion-row>
+
+  <div class="confirm_div">
+    <button class="In_btn" [routerLink]="['/tabs']">Verify</button>
+  </div>
+</ion-content>

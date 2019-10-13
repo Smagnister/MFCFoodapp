@@ -1,0 +1,43 @@
+<!-- <ion-content class="padding">
+
+  <ion-grid class="input_grid">
+    <ion-row class="input_row">
+      <ion-input type="number" id="otpNumber" class="form-control" pattern="[0-9]{6}" class="otp_text"></ion-input>
+    </ion-row>
+    <ion-row>
+      <button ion-button class="verify_btn" [routerLink]="['/tabs']">
+        Verify
+      </button>
+    </ion-row>
+
+    <ion-row>
+      <ion-label class="warn_text">
+        Didn't receive the OTP ?
+      </ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-label class="resend_code">Resend Code
+      </ion-label>
+    </ion-row>
+  </ion-grid>
+</ion-content> -->
+
+<ion-content>
+  <div class="flex_pro">
+    <img src="../../../assets/back_arrow.png" class="back_btn">
+    <ion-label class="verify">Verify Phone Number</ion-label>
+  </div>
+  <div>
+    <p class="num_info">we have send you an SMS with a code to {{mbeNumber}}</p>
+  </div>
+  <div>
+    <ion-item class="num_input">
+      <ion-list>
+        <ion-input type="number" [(ngModel)]="mbeNumber" class="otp_center"></ion-input>
+      </ion-list>
+    </ion-item>
+  </div>
+  <div class="confirm_div">
+    <button class="In_btn"  [routerLink]="['/enterotp']">Confirm</button>
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+      <!-- <ion-icon name="person" class="header_menu" slot="start"></ion-icon> -->
+      <ion-input class="search_input" placeholder="Search your food here">
+        <ion-icon name="search" class="search"></ion-icon>
+      </ion-input>
+      <ion-icon name="cart" class="header_menu" slot="end"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="padding">
+    <ion-row>
+      <h4 class="dash_head">Today's Special </h4>
+    </ion-row>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-row class="dash_menu" [routerLink]="['/search-list']">
+          <img src="../../../assets/s3.jpg" class="dash_img">
+          <img src="../../../assets/s4.jpg" class="dash_img">
+        </ion-row>
+      
+      </ion-item>
+      <ion-row>
+          <h4 class="dash_head">Categories</h4>
+        </ion-row>
+  
+      <ion-item>
+          <ion-row class="dash_menu" [routerLink]="['/search-list']">
+            <img src="../../../assets/meat2.png" class="category">
+            <img src="../../../assets/meat4.jpg" class="category">
+          </ion-row>
+      </ion-item>
+      <ion-item>
+          <ion-row class="dash_menu" [routerLink]="['/search-list']">
+            <img src="../../../assets/s4.jpg" class="category">
+            <img src="../../../assets/s5.jpg" class="category">
+          </ion-row>
+      </ion-item>
+      <ion-item>
+          <ion-row class="dash_menu" [routerLink]="['/search-list']">
+            <img src="../../../assets/meat2.png" class="category">
+            <img src="../../../assets/meat4.jpg" class="category">
+          </ion-row>
+      </ion-item>
+      <ion-item>
+          <ion-row class="dash_menu" [routerLink]="['/search-list']">
+            <img src="../../../assets/s3.jpg" class="category">
+            <img src="../../../assets/s4.jpg" class="category">
+          </ion-row>
+      </ion-item>
+      <ion-item>
+          <ion-row class="dash_menu" [routerLink]="['/search-list']">
+            <img src="../../../assets/foodimg.jpeg" class="category">
+            <img src="../../../assets/loginimg.jpg" class="category">
+          </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

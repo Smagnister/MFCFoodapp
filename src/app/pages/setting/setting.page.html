@@ -1,0 +1,69 @@
+<ion-content>
+  <div class="flex_pro">
+      <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs/home']" slot="start" class="back_btn"></ion-icon>
+    <!-- <img src="../../../assets/back_arrow.png" class="back_btn" [routerLink]="'/tabs/home'"> -->
+    <ion-label class="verify">Settings</ion-label>
+  </div>
+  <!-- <div style="text-align: center;">
+    <img src="../../../assets/s4.jpg" class="pro_img">
+  </div> -->
+
+  <div class="settings_row">
+    <!-- <ion-list lines="none">
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="mail" class="num_icon"></ion-icon>
+          <ion-input placeholder="Email" type="email"></ion-input>
+        </div>
+      </ion-item>
+  
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="key" class="num_icon"></ion-icon>
+               <ion-input placeholder="Password" type="password"></ion-input>
+        </div>
+      </ion-item>
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon name="key" class="num_icon"></ion-icon>
+          <ion-input placeholder="Confirm password" type="password"></ion-input>
+        </div>
+      </ion-item>
+    </ion-list> -->
+
+    <ion-list lines="none">
+      <ion-item class="gap">
+        <div class="same_line">
+          <p>Location</p>
+          <ion-toggle class="settings_icon"></ion-toggle>
+          <!-- <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" slot="end"></ion-icon> -->
+        </div>
+      </ion-item>
+      <ion-item class="gap">
+        <div class="same_line"> 
+          <p>Payment</p>
+          <!-- <ion-icon name="mail"class="settings_icon"></ion-icon> -->
+        </div>
+      </ion-item>
+      <ion-item class="gap">
+        <div class="same_line">
+          <p>Notification</p>
+          <ion-toggle class="settings_icon"></ion-toggle>
+          <!-- <ion-icon name="mail" class="num_icon" slot="end"></ion-icon> -->
+        </div>
+      </ion-item>
+      <ion-item class="gap">
+        <div class="same_line">
+          <p>Settings</p>
+          <!-- <ion-icon ios="ios-code-working" md="md-code-working" class="settings_icon"></ion-icon> -->
+        </div>
+      </ion-item>
+      <ion-item class="gap" [routerLink]="['/signin']">
+        <div class="same_line">
+          <p>Exit</p>
+          <!-- <ion-icon ios="ios-exit" md="md-exit" class="settings_icon"></ion-icon> -->
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content> 

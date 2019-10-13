@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="flex_pro">
+    <!-- <img src="../../../assets/back_arrow.png" class="back_btn"> -->
+    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/address-popup']" slot="start" class="back_btn"></ion-icon>
+    <ion-label class="verify">Confirm Order</ion-label>
+  </div>
+  <div>
+    <ion-list lines="none" class="order_list">
+      <ion-item>
+        <ion-row>
+          <p>Fish</p>
+          <p class="amt_p">Rs. 100</p>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <ion-row>
+          <p>Mutton</p>
+          <p class="amt_p">Rs. 100</p>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <ion-row>
+          <p>Chicken</p>
+          <p class="amt_p">Rs. 100</p>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <ion-row>
+          <p>Beaf</p>
+          <p class="amt_p">Rs. 100</p>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <ion-row>
+          <p>Pork</p>
+          <p class="amt_p">Rs. 100</p>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <ion-row class="total_row">
+          <p>Total</p>
+          <p class="amt_p">Rs. 500</p>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="confirm_div">
+    <button class="In_btn" (click)="orderconfirmation()">Pay Now</button>
+  </div>
+</ion-content>
