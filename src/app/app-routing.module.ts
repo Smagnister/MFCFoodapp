@@ -16,6 +16,7 @@ import { EnterotpComponent } from './components/enterotp/enterotp.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { ProfilesettingsComponent } from './component/profilesettings/profilesettings.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'myorders', component: MyordersComponent },
   { path: 'verifyotp', component: VerifyOtpComponent},
+  { path: 'profilesetting', component: ProfilesettingsComponent},
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
@@ -43,7 +45,8 @@ const routes: Routes = [
   { path: 'search', component:SearchComponent},
   { path: 'search-list', component : SearchlistComponent},
   {path: 'search-detail', component: SearchdetailsComponent},
-  { path: 'address-popup', loadChildren: './pages/address-popup/address-popup.module#AddressPopupPageModule' },
+  { path: 'address-popup', loadChildren: './pages/address-popup/address-popup.module#AddressPopupPageModule' }, 
+  
 ];
 @NgModule({
   imports: [

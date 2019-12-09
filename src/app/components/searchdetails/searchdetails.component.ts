@@ -16,9 +16,9 @@ export class SearchdetailsComponent implements OnInit {
   price = 130;
   constructor(public actionsheet: ActionSheetController,
     public alertCrtl: AlertController, public router: Router,
-    public modalCtrl: ModalController, 
-    public commonAJAX: CommonAjaxService) {
-    this.JSONDATA = commonAJAX.getFoodDetails();
+    public modalCtrl: ModalController,
+    public ajaxs: CommonAjaxService) {
+
   }
 
   ngOnInit() { }
@@ -65,10 +65,32 @@ export class SearchdetailsComponent implements OnInit {
       header: 'Add your current address',
       inputs: [
         {
-          name: 'name1',
+          name: 'street',
           type: 'text',
           placeholder: 'XXXX',
 
+        },
+        {
+          name: 'area',
+          type: 'text',
+          placeholder: 'Mobile number',
+
+        },
+        {
+          name: 'pincode',
+          type: 'text',
+          placeholder: 'Email id',
+
+        },
+        {
+          name: 'state',
+          type: 'text',
+          placeholder: 'Email id',
+        },
+        {
+          name: 'country',
+          type: 'text',
+          placeholder: 'Email id',
         }
       ],
       buttons: [
@@ -89,5 +111,35 @@ export class SearchdetailsComponent implements OnInit {
       ]
     });
     await alert.present();
+  }
+
+  data = {
+    "assigned_store": "58",
+    "payment_type": "cash_on_delivery",
+    "items": [
+      {
+        "id": "4",
+        "quantity": "3"
+      },
+      {
+        "id": "5",
+        "quantity": "2"
+      }
+    ]
+  };
+
+  async placeOrder() {
+    this.ajaxs.callAjax('users/order', this.data, 'post')
+      .then((res: any) => {
+        if (res.status == '1') {
+          //this.ajaxs.toast(res.data, 'Success');
+          //this.presentAlertPrompt();
+          this.openPopupModel();
+        } else {
+          this.ajaxs.toast(res.data, 'Success');
+        }
+      }, err => {
+
+      });
   }
 }

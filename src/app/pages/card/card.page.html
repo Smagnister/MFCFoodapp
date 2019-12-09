@@ -1,12 +1,17 @@
 <ion-content>
   <div class="flex_pro">
-      <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs']" slot="start" class="back_btn"></ion-icon>
+      
+    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs']" slot="start" class="back_btn"></ion-icon>
     <!-- <img src="../../../assets/back_arrow.png" class="back_btn" [routerLink]="['/tabs']"> -->
-    <ion-label class="verify">My Cart</ion-label>
+    <!-- <ion-label class="verify" >My Cart</ion-label> -->
   </div>
   <div>
-    <ion-list lines="none">
-      <ion-item class="item_row">
+    <div *ngIf="this.ProductsRes">
+      <p class="no_records">No orders available </p>
+    </div>
+    <ion-list >
+        <!-- *ngFor="let i of this.ProductsRes" -->
+      <ion-item class="item_row" >
         <ion-card class="item_card">
           <ion-row class="item_row">
             <div [routerLink]="['/search-detail']">
@@ -17,13 +22,16 @@
             <div>
               <ion-label class="item_label">
                 <h3>
-                  heading
+                  Chicken
+                  <!-- {{i.product.name}} -->
                 </h3>
                 <p>
-                  Meat Name
+                  Chicken chukka with honey
+                  <!-- {{i.product.description}} -->
                 </p>
                 <p>
-                  Meat Description
+                  Rs.230
+                  <!-- {{'Rs.'+i.product.final_price}} -->
                 </p>
               </ion-label>
             </div>
@@ -37,192 +45,7 @@
           </div>
         </ion-card>
       </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate5.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-
-            <!-- <div class="centr_margin">
-                        <img src="../../../assets/plus-button.png" width="50px">
-                      </div> -->
-          </ion-row>
-          <div style="text-align: end;">
-            <Button ion-button class="completed_btn"> Completed</Button>
-          </div>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate4.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-
-            <!-- <div class="centr_margin">
-                          <img src="../../../assets/plus-button.png" width="50px">
-                        </div> -->
-          </ion-row>
-          <div style="text-align: end;">
-            <Button ion-button class="order_now" [routerLink]="['/search-detail']"> Order Now</Button>
-          </div>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate3.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-
-            <!-- <div class="centr_margin">
-                            <img src="../../../assets/plus-button.png" width="50px">
-                          </div> -->
-          </ion-row>
-          <div style="text-align: end;">
-            <Button ion-button class="completed_btn" > Completed</Button>
-          </div>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate2.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-
-            <!-- <div class="centr_margin">
-                              <img src="../../../assets/plus-button.png" width="50px">
-                            </div> -->
-          </ion-row>
-          <div style="text-align: end;">
-            <Button ion-button class="completed_btn"> Completed</Button>
-          </div>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate1.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-
-            <!-- <div class="centr_margin">
-                                <img src="../../../assets/plus-button.png" width="50px">
-                              </div> -->
-          </ion-row>
-          <div style="text-align: end;">
-            <Button ion-button class="order_now" [routerLink]="['/search-detail']"> Order Now</Button>
-          </div>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate5.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-
-            <!-- <div class="centr_margin">
-                                  <img src="../../../assets/plus-button.png" width="50px">
-                                </div> -->
-          </ion-row>
-          <div style="text-align: end;">
-            <Button ion-button class="order_now" [routerLink]="['/search-detail']"> Order Now</Button>
-          </div>
-        </ion-card>
-      </ion-item>
+     
     </ion-list>
   </div>
 </ion-content>

@@ -1,17 +1,17 @@
 <ion-content>
   <div class="flex_pro">
-      <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="back_btn"></ion-icon>
+    <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="back_btn"  [routerLink]="['/signin']"></ion-icon>
     <!-- <img src="../../../assets/back_arrow.png" class="back_btn"> -->
     <ion-label class="verify"> OTP Verification</ion-label>
   </div>
 
-  <div>
+  <div style="text-align: center;">
     <p class="num_info">Enter your otp code here</p>
   </div>
   <div>
     <ion-item class="num_input">
       <ion-list>
-        <ion-input type="number"></ion-input>
+        <ion-input type="tel" [(ngModel)]="otp" maxlength="6"></ion-input>
       </ion-list>
     </ion-item>
   </div>
@@ -24,6 +24,8 @@
   </ion-row>
 
   <div class="confirm_div">
-    <button class="In_btn" [routerLink]="['/tabs']">Verify</button>
+    <button class="In_btn" (click)="verifyOTP()">Verify</button>
   </div>
 </ion-content>
+
+<!-- [routerLink]="['/tabs']" -->

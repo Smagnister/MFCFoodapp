@@ -1,12 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <!-- <img src="../../../assets/back_arrow.png" slot="start" class="back_arrow" [routerLink]="['/tabs']"> -->
-    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs']" slot="start" class="back_arrow"></ion-icon>
-    <ion-input class="search_input" placeholder="find your food here">
-      <ion-icon name="search" class="search"></ion-icon>
-    </ion-input>
+    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs']" slot="start" class="back_arrow">
+    </ion-icon>
+    <!-- <ion-input class="search_input" placeholder="find your food here" (keyup.enter)="getSearchProducts()"> -->
+        <ion-searchbar placeholder="find your food here" (keyup.enter)="getSearchProducts()"></ion-searchbar>
+      <!-- <ion-icon name="search" class="search"></ion-icon> -->
+    <!-- </i/////on-input> -->
     <ion-buttons slot="end">
-      <ion-button (click)="openCart()">
+      <ion-button [routerLink]="['/tabs/card']">
         <ion-badge>4</ion-badge>
         <ion-icon slot="icon-only" name="cart"></ion-icon>
       </ion-button>
@@ -56,9 +58,9 @@
       <ion-label>Shop</ion-label>
     </ion-chip>
   </ion-row>
-
+  <!-- *ngFor="let i of this.Products" -->
   <ion-list lines="none">
-    <ion-item class="item_row">
+    <ion-item class="item_row" >
       <ion-card class="item_card">
         <ion-row class="item_row">
           <div [routerLink]="['/search-detail']">
@@ -69,161 +71,36 @@
           <div>
             <ion-label class="item_label">
               <h3>
-                heading
+                <!-- {{i.name}} -->
+                Chicken 
               </h3>
               <p>
-                Meat Name
+                <!-- {{i.description}} -->
+                Chicken Role
               </p>
               <p>
-                Meat Description
+                Rs. 120
+                <!-- {{'Rs.'+i.final_price}} -->
               </p>
             </ion-label>
           </div>
         </ion-row>
-      </ion-card>
-    </ion-item>
-    <ion-item class="item_row">
-      <ion-card class="item_card">
-        <ion-row class="item_row">
-          <div [routerLink]="['/search-detail']">
-            <ion-avatar slot="start">
-              <img src="../../../assets/meat3.jpg">
-            </ion-avatar>
-          </div>
-          <div>
-            <ion-label class="item_label">
-              <h3>
-                heading
-              </h3>
-              <p>
-                Meat Name
-              </p>
-              <p>
-                Meat Description
-              </p>
-            </ion-label>
+        <ion-row>
+          <div class="quantity" style="margin: auto;">
+            <button class="plus-btn" type="button" name="button" style="height: 45px; background-color: white;font-size: xx-large;">
+              <!-- <img src="plus.svg" alt=""  (click)="addtocart(i.id)" /> -->
+              <ion-icon name="add-circle"></ion-icon>
+            </button>
+            <input type="text" name="name" value="1" class="count">
+            <button class="minus-btn" type="button" name="button"  style="height: 45px; background-color: white;font-size: xx-large;">
+              <ion-icon name="remove-circle"></ion-icon>
+            </button>
           </div>
         </ion-row>
-      </ion-card>
-    </ion-item>
-    <ion-item [routerLink]="['/search-detail']" class="item_row">
-      <ion-card class="item_card">
-        <ion-row class="item_row">
-          <div>
-            <ion-avatar slot="start">
-              <img src="../../../assets/meat3.jpg">
-            </ion-avatar>
-          </div>
-          <div>
-            <ion-label class="item_label">
-              <h3>
-                heading
-              </h3>
-              <p>
-                Meat Name
-              </p>
-              <p>
-                Meat Description
-              </p>
-            </ion-label>
-          </div>
+        <ion-row>
+          <button class="addcart">Add to cart</button>
         </ion-row>
-      </ion-card>
-    </ion-item>
-    <ion-item [routerLink]="['/search-detail']" class="item_row">
-      <ion-card class="item_card">
-        <ion-row class="item_row">
-          <div>
-            <ion-avatar slot="start">
-              <img src="../../../assets/meat3.jpg">
-            </ion-avatar>
-          </div>
-          <div>
-            <ion-label class="item_label">
-              <h3>
-                heading
-              </h3>
-              <p>
-                Meat Name
-              </p>
-              <p>
-                Meat Description
-              </p>
-            </ion-label>
-          </div>
-        </ion-row>
-      </ion-card>
-    </ion-item>
-    <ion-item [routerLink]="['/search-detail']" class="item_row">
-      <ion-card class="item_card">
-        <ion-row class="item_row">
-          <div>
-            <ion-avatar slot="start">
-              <img src="../../../assets/meat3.jpg">
-            </ion-avatar>
-          </div>
-          <div>
-            <ion-label class="item_label">
-              <h3>
-                heading
-              </h3>
-              <p>
-                Meat Name
-              </p>
-              <p>
-                Meat Description
-              </p>
-            </ion-label>
-          </div>
-        </ion-row>
-      </ion-card>
-    </ion-item>
-    <ion-item [routerLink]="['/search-detail']" class="item_row">
-      <ion-card class="item_card">
-        <ion-row class="item_row">
-          <div>
-            <ion-avatar slot="start">
-              <img src="../../../assets/meat3.jpg">
-            </ion-avatar>
-          </div>
-          <div>
-            <ion-label class="item_label">
-              <h3>
-                heading
-              </h3>
-              <p>
-                Meat Name
-              </p>
-              <p>
-                Meat Description
-              </p>
-            </ion-label>
-          </div>
-        </ion-row>
-      </ion-card>
-    </ion-item>
-    <ion-item [routerLink]="['/search-detail']" class="item_row">
-      <ion-card class="item_card">
-        <ion-row class="item_row">
-          <div>
-            <ion-avatar slot="start">
-              <img src="../../../assets/meat3.jpg">
-            </ion-avatar>
-          </div>
-          <div>
-            <ion-label class="item_label">
-              <h3>
-                heading
-              </h3>
-              <p>
-                Meat Name
-              </p>
-              <p>
-                Meat Description
-              </p>
-            </ion-label>
-          </div>
-        </ion-row>
+
       </ion-card>
     </ion-item>
   </ion-list>

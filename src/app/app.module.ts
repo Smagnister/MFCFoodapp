@@ -25,11 +25,13 @@ import { EnterotpComponent } from './components/enterotp/enterotp.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AddressPopupPageModule } from './pages/address-popup/address-popup.module';
 import { CommonAjaxService } from './common/common-ajax.service';
-import { Camera} from '@ionic-native/camera/ngx';
-
+import { Camera } from '@ionic-native/camera/ngx';
+import { commonvars } from './common/commonvars';
+import {FCM} from '@ionic-native/fcm/ngx';
+import { ProfilesettingsComponent } from './component/profilesettings/profilesettings.component';
 
 
 @NgModule({
@@ -46,30 +48,33 @@ import { Camera} from '@ionic-native/camera/ngx';
     SearchlistComponent,
     SearchdetailsComponent,
     EnterotpComponent,
-      //new template Changes 
+    //new template Changes 
     OrderDetailsComponent,
     SignupComponent,
-    SigninComponent, 
+    SigninComponent,
+    ProfilesettingsComponent
 
   ],
   entryComponents: [],
   imports: [
-    BrowserModule, IonicModule.forRoot(), 
-    AppRoutingModule, 
-    FormsModule, ReactiveFormsModule, 
-    HttpClientModule, 
+    BrowserModule, IonicModule.forRoot(),
+    AppRoutingModule,
+    FormsModule, ReactiveFormsModule,
+    HttpClientModule,
     AddressPopupPageModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    FCM,
     CommonAjaxService,
+    commonvars,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent], 
+  bootstrap: [AppComponent],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA, 
+    CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ]
 })

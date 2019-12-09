@@ -1,0 +1,54 @@
+<ion-content>
+  <div class="flex_pro">
+    <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="back_btn" [routerLink]="['/enterotp']"></ion-icon>
+    <!-- <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs/home']" slot="start"
+      class="back_btn"></ion-icon> -->
+    <!-- <img src="../../../assets/back_arrow.png" class="back_btn" [routerLink]="'/tabs/home'"> -->
+    <ion-label class="verify">Profile</ion-label>
+  </div>
+
+
+
+  <!-- 
+       <div class="profile_design">
+      <ion-list lines="none" class="profile_list">
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon ios="ios-person-add" md="md-person-add" class="num_icon"></ion-icon>
+          <ion-input placeholder="Username" type="text" [(ngModel)]="this.data.username"></ion-input>
+        </div>
+      </ion-item>
+
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon ios="ios-happy" md="md-happy" class="num_icon"></ion-icon>
+          <ion-input placeholder="About me" type="text"></ion-input>
+        </div>
+      </ion-item>
+
+      <ion-item class="gap">
+        <div class="same_line">
+          <ion-icon ios="ios-create" md="md-create" class="num_icon"></ion-icon>
+          <ion-input placeholder="Description" type="text"></ion-input>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div> -->
+
+
+</ion-content>
+<ion-footer>
+  <div class="edit_div">
+    <img src="../../../assets/s4.jpg" class="pro_img">
+    <ion-icon name="create" class="edit_icon" (click)="updateProfilepic()" ></ion-icon>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <!-- <ion-icon ios="ios-person-add" md="md-person-add" class="num_icon"></ion-icon> -->
+    <ion-input placeholder="Username" type="text" [(ngModel)]="this.username"></ion-input>
+  </div>
+  <div class="In_btn_div">
+    <Button ion-button class="In_btn" (click)="updateProfile()"> Proceed</Button>
+
+    <!-- (click)="this.updateProfiletoServer()" [routerLink]="['/tabs/home']"-->
+  </div>
+</ion-footer>

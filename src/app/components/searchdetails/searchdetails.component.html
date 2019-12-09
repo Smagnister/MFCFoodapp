@@ -1,7 +1,8 @@
 <ion-header>
   <ion-toolbar>
-      <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs/home']" slot="start" class="back_arrow"></ion-icon>
-      <!-- <ion-icon name="arrow-round-back" slot="start" class="back_arrow" [routerLink]="['/tabs/home']"></ion-icon> -->
+    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs/home']" slot="start"
+      class="back_arrow"></ion-icon>
+    <!-- <ion-icon name="arrow-round-back" slot="start" class="back_arrow" [routerLink]="['/tabs/home']"></ion-icon> -->
     <!-- <img src="../../../assets/left-arrow.png" > -->
     <!-- <ion-icon name="person" class="header_menu" slot="start"></ion-icon> -->
     <!-- <ion-input class="search_input" placeholder="find your food here">
@@ -17,13 +18,14 @@
     <img src="../../../assets/googlemap.jpg" class="detail_img" />
     <ion-card-header>
       <ion-card-title>
-        <p >Fresh meats and Eats</p>
+        <p>Fresh meats and Eats</p>
       </ion-card-title>
       <ion-card-subtitle> Rs. 120</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       Finely chopped fish slices
-      <div class="add_card">        <ion-row class="operators">
+      <!-- <div >      
+          <ion-row class="operators">
           <ion-col (click)="dec()" class="operator">
             -
           </ion-col>
@@ -34,8 +36,21 @@
             +
           </ion-col>
         </ion-row>
-      </div>
-
+      </div> -->
+      <ion-row>
+        <div class="quantity" style="margin: auto;">
+          <button class="plus-btn" type="button" name="button"
+            style="height: 45px; background-color: white;font-size: xx-large;">
+            <!-- <img src="plus.svg" alt=""  (click)="addtocart(i.id)" /> -->
+            <ion-icon name="add-circle" (click)="inc()"></ion-icon>
+          </button>
+          <input type="text" name="name" value= '{{qty}}' class="count">
+          <button class="minus-btn" type="button" name="button"
+            style="height: 45px; background-color: white;font-size: xx-large;">
+            <ion-icon name="remove-circle" (click)="dec()"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
       <div>
         <p class="total"> Rs. {{price * qty}}</p>
       </div>
@@ -54,9 +69,9 @@
             </ion-col>
           </ion-row>
         </div> -->
-        <div class="more_div"><a class="more_text" [routerLink]="['/search-list']"  >Show more</a></div>
+        <div class="more_div"><a class="more_text" [routerLink]="['/search-list']">Show more</a></div>
 
-<!-- "-->
+        <!-- "-->
 
         <!-- <ion-chip class="my_chips" slot="start">
           <ion-label>Small</ion-label>
@@ -71,12 +86,13 @@
     </ion-card-content>
   </ion-card>
   <div class="order_btn">
-    <button class="In_btn" [routerLink]="['/address-popup']">Proceed</button>
+    <button class="In_btn" [routerLink]="['/address-popup']">Purchase</button>
   </div>
 </ion-content>
 
-
-<!-- <ion-app>
+<!-- (click)="placeOrder()" -->
+<!--  [routerLink]="['/address-popup']"
+   <ion-app>
   <ion-header translucent>
     <ion-toolbar>
       <ion-title>Card</ion-title>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { commonvars } from 'src/app/common/commonvars';
+import { CommonAjaxService } from 'src/app/common/common-ajax.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -17,9 +20,22 @@ export class ProfilePage implements OnInit {
   }
 
 
-  constructor(public camera: Camera) { }
+  constructor(
+    public camera: Camera,
+    public vars: commonvars,
+    public ajax: CommonAjaxService,
+    public router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  data = {
+    "username": "",
+    "upload_image": {
+      "image": this.vars.imageBASE64,
+      "type": "jpg"
+    }
   }
 
   updateProfilepic() {
@@ -35,6 +51,23 @@ export class ProfilePage implements OnInit {
       console.log(err);
       // Handle error
     });
+  }
+
+  // public function updateprofileinfo()/
+
+  updateProfiletoServer() {
+    this.ajax.callAjax('users/updateprofileinfo', this.data, 'post')
+      .then((res: any) => {
+
+        if (res.status == '1') {
+          this.ajax.toast(res.msg, "Success");
+          this.router.navigateByUrl("/tabs/home");
+        } else {
+          this.ajax.toast(res.msg, "Success");
+        }
+      }, (err: any) => {
+        console.log("error" + err);
+      });
   }
 
 }

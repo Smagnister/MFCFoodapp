@@ -1,0 +1,5 @@
+git remote add origin https://github.com/Smagnister/MFCBiker.git
+
+git remote add origin remote repository https://github.com/Smagnister/MFCBiker.git
+
+git remote add origin https://github.com/Smagnister/MFCBiker.git

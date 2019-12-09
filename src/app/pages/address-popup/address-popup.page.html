@@ -6,41 +6,107 @@
 
 <ion-content>
   <div class="flex_pro">
-      <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/search-detail']" slot="start" class="back_btn"></ion-icon>
+    <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="back_btn" [routerLink]="['/search-detail']" slot="start">
+    </ion-icon>
     <!-- <img src="../../../assets/back_arrow.png" class="back_btn" [routerLink]="['/search-detail']"> -->
-    <ion-label class="verify">Current Address</ion-label>
+    <ion-label class="verify">Pick Address</ion-label>
   </div>
 
-  <div class="signin_design">
+  <div>
     <ion-list>
-      <ion-item class="gap">
-        <div class="same_line">
-          <!-- <ion-icon name="mail" class="num_icon"></ion-icon> -->
-          <ion-input placeholder="Address" type="email"></ion-input>
-        </div>
+      <!-- *ngFor="let i of this.Addrs" -->
+      <ion-item class="item_row">
+        <ion-card class="item_card" (click)="nav()">
+          <!-- (click)="navSearch(i.category_id, i.category)" -->
+          <ion-row class="item_row">
+            <div>
+              <ion-label class="item_label">
+                <h3>
+                  <!-- <p>{{i.location}}</p> -->
+
+                  <p>Karaikudi</p>
+                </h3>
+                <p>
+                  13 kilo meters
+                  <!-- {{i.distance}} -->
+                </p>
+              </ion-label>
+            </div>
+          </ion-row>
+        </ion-card>
       </ion-item>
-      <ion-item class="gap">
-        <div class="same_line">
-          <!-- <ion-icon name="mail" class="num_icon"></ion-icon> -->
-          <ion-input placeholder="Address 1" type="email"></ion-input>
-        </div>
+      <ion-item class="item_row">
+        <ion-card class="item_card" (click)="nav()">
+          <!-- (click)="navSearch(i.category_id, i.category)" -->
+          <ion-row class="item_row">
+            <div>
+              <ion-label class="item_label">
+                <h3>
+                  <!-- <p>{{i.location}}</p> -->
+
+                  <p>Devakottai</p>
+                </h3>
+                <p>
+                  33 kilo meters
+                  <!-- {{i.distance}} -->
+                </p>
+              </ion-label>
+            </div>
+          </ion-row>
+        </ion-card>
       </ion-item>
-      <ion-item class="gap">
-        <div class="same_line">
-          <!-- <ion-icon name="mail" class="num_icon"></ion-icon> -->
-          <ion-input placeholder="Address 2" type="email"></ion-input>
-        </div>
+      <ion-item class="item_row">
+        <ion-card class="item_card " (click)="nav()">
+          <!-- (click)="navSearch(i.category_id, i.category)" -->
+          <ion-row class="item_row">
+            <div>
+              <ion-label class="item_label">
+                <h3>
+                  <!-- <p>{{i.location}}</p> -->
+
+                  <p>College road, sriram nagar</p>
+                </h3>
+                <p>
+                  9 kilo meters
+                  <!-- {{i.distance}} -->
+                </p>
+              </ion-label>
+            </div>
+          </ion-row>
+        </ion-card>
+
+
       </ion-item>
-      <ion-item class="gap">
-        <div class="same_line">
-          <!-- <ion-icon name="mail" class="num_icon"></ion-icon> -->
-          <ion-input placeholder="Address 3" type="email"></ion-input>
-        </div>
+      <ion-item class="item_row">
+        <ion-card class="item_card " (click)="nav()">
+          <!-- (click)="navSearch(i.category_id, i.category)" -->
+          <ion-row class="item_row">
+            <div>
+              <ion-label class="item_label">
+                <h3>
+                  <!-- <p>{{i.location}}</p> -->
+
+                  <p>kalani vasal</p>
+                </h3>
+                <p>
+                  23 kilo meters
+                  <!-- {{i.distance}} -->
+                </p>
+              </ion-label>
+            </div>
+          </ion-row>
+        </ion-card>
       </ion-item>
     </ion-list>
   </div>
 
-  <div class="order_btn">
+  <ion-fab vertical="center" horizontal="end" slot="fixed" (click)="this.ajax.alert()">
+    <ion-fab-button>
+      <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <!-- <div class="order_btn">
     <button class="In_btn" [routerLink]="'/orderdetail'">Place Order</button>
-  </div>
+  </div> -->
+
 </ion-content>

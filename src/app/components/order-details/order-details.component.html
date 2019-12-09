@@ -1,7 +1,8 @@
 <ion-content>
   <div class="flex_pro">
     <!-- <img src="../../../assets/back_arrow.png" class="back_btn"> -->
-    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/address-popup']" slot="start" class="back_btn"></ion-icon>
+    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/address-popup']" slot="start"
+      class="back_btn"></ion-icon>
     <ion-label class="verify">Confirm Order</ion-label>
   </div>
   <div>
@@ -37,12 +38,34 @@
         </ion-row>
       </ion-item>
       <ion-item>
-        <ion-row class="total_row">
+        <!-- class="total_row" -->
+        <ion-row>
           <p>Total</p>
           <p class="amt_p">Rs. 500</p>
         </ion-row>
       </ion-item>
     </ion-list>
+  </div>
+  <div class="same_line">
+      <ion-row radio-group [(ngModel)]="sexe">
+          <ion-col>
+            <ion-item>
+              Payment
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label>Card</ion-label>
+              <ion-radio ></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>Cash</ion-label>
+              <ion-radio ></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
   </div>
   <div class="confirm_div">
     <button class="In_btn" (click)="orderconfirmation()">Pay Now</button>

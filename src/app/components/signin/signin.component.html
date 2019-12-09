@@ -8,29 +8,25 @@
       <ion-item class="gap">
         <div class="same_line">
           <ion-icon name="call" class="num_icon"></ion-icon>
-          <ion-input placeholder="Mobile Number" type="number"></ion-input>
+          <ion-input placeholder="Mobile Number" type="tel" maxlength="10"  [(ngModel)]="Mbenum"></ion-input>
         </div>
       </ion-item>
-      <!-- <ion-item class="gap">
-          <div class="same_line">
-            <ion-icon name="key" class="num_icon"></ion-icon>
-            <ion-input placeholder="Password" type="password"></ion-input>
-          </div>
-        </ion-item> -->
+    
     </ion-list>
 
-    <div class="forget_pwd" [routerLink]="['/forgetpassword']"> forget password? </div>
-  
+    <!-- <div class="forget_pwd" [routerLink]="['/forgetpassword']"> forget password? </div> no need -->
+
   </div>
 
   <div class="In_btn_div">
-    <Button ion-button class="In_btn" [routerLink]="['/enterotp']"> SignIn</Button>
+    <Button ion-button class="In_btn"  (click)="checkLogin()"> SignIn</Button>
+    <!-- (click)="checkLogin()" [routerLink]="['/enterotp']" -->
   </div>
 
-  <div>
+
+  <!-- <div>
     <h4 class="nav_reg">Don't have an Account ? <a [routerLink]="['/signup']">Register here</a></h4>
-  </div>
-
-  
-
+  </div> -->
 </ion-content>
+
+<!-- [routerLink]="['/verifyotp']" -->

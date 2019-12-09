@@ -95,7 +95,7 @@
 
     </ion-scroll> -->
 
-
+    <!-- *ngFor="let i of this.FOODDATA" -->
 
 
     <ion-list lines="none">
@@ -104,15 +104,14 @@
           <img src="../../../assets/s3.jpg" class="dash_img">
           <img src="../../../assets/s4.jpg" class="dash_img">
         </ion-row>
-
       </ion-item>
       <ion-row>
         <h4 class="dash_title">Popular this week</h4>
       </ion-row>
-      <ion-item class="item_row ">
-        <ion-card class="item_card ">
+      <ion-item class="item_row" [routerLink]="['/search-list']">
+        <ion-card class="item_card " (click)="navSearch(i.category_id, i.category)">
           <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
+            <div>
               <ion-avatar slot="start">
                 <img src="../../../assets/plate1.jpg">
               </ion-avatar>
@@ -120,117 +119,44 @@
             <div>
               <ion-label class="item_label">
                 <h3>
-                  heading
+                  <p>Mutton</p>
                 </h3>
                 <p>
-                  Meat Name
+                  Mutton Chukka
                 </p>
                 <p>
-                  Meat Description
+                  Mutton Chukka with honey
                 </p>
               </ion-label>
             </div>
           </ion-row>
         </ion-card>
       </ion-item>
-
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate1.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-          </ion-row>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate2.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-          </ion-row>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row" [routerLink]="['\search-detail']">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate3.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-          </ion-row>
-        </ion-card>
-      </ion-item>
-      <ion-item class="item_row">
-        <ion-card class="item_card">
-          <ion-row class="item_row">
-            <div [routerLink]="['/search-detail']">
-              <ion-avatar slot="start">
-                <img src="../../../assets/plate4.jpg">
-              </ion-avatar>
-            </div>
-            <div>
-              <ion-label class="item_label">
-                <h3>
-                  heading
-                </h3>
-                <p>
-                  Meat Name
-                </p>
-                <p>
-                  Meat Description
-                </p>
-              </ion-label>
-            </div>
-          </ion-row>
-        </ion-card>
-      </ion-item>
-
+      <!-- *ngFor="let i of this.FOODDATA" (click)="navSearch(i.category_id, i.category)" -->
+      <ion-item class="item_row" [routerLink]="['/search-list']">
+          <ion-card class="item_card" >
+            <ion-row class="item_row">
+              <div>
+                <ion-avatar slot="start">
+                  <img src="../../../assets/plate1.jpg">
+                </ion-avatar>
+              </div>
+              <div>
+                <ion-label class="item_label">
+                  <h3>
+                    <p>Chicken</p>
+                  </h3>
+                  <p>
+                    Chicken role
+                  </p>
+                  <p>
+                    chicken role of wings
+                  </p>
+                </ion-label>
+              </div>
+            </ion-row>
+          </ion-card>
+        </ion-item>
     </ion-list>
   </div>
 </ion-content>

@@ -1,17 +1,18 @@
 <ion-content>
   <div class="flex_pro">
     <!-- <img src="../../../assets/back_arrow.png" class="back_btn" [routerLink]="['/tabs']"> -->
-    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs']" slot="start" class="back_btn"></ion-icon>
+    <ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft" [routerLink]="['/tabs']" slot="start" class="back_btn">
+    </ion-icon>
     <ion-label class="verify">My Order</ion-label>
   </div>
 
   <div class="div_menu">
     <ion-row>
       <ion-col style="text-align: end;">
-        <button class="div_menu_btn" (click)="ongoing=true; completed= false;">Ongoing</button>
+        <button class="div_menu_btn" (click)="ongoing=true; completed= false;">UpComing</button>
       </ion-col>
       <ion-col>
-        <button class="div_menu_btn unselected" (click)="ongoing= false; completed= true;">Completed</button>
+        <button class="div_menu_btn unselected" (click)="ongoing= false; completed= true;">Ongoing</button>
       </ion-col>
     </ion-row>
   </div>
@@ -39,6 +40,7 @@
                 </p>
               </ion-label>
             </div>
+           
 
             <!-- <div class="centr_margin">
                   <img src="../../../assets/plus-button.png" width="50px">

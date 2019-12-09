@@ -452,6 +452,8 @@ ion-tabbar {
 .operator {
     border: 1px solid green;
     border-radius: 40px;
+    margin: auto;
+    text-align: center;
 }
 .back_arrow{
     width: 25px;
@@ -548,7 +550,7 @@ ion-badge {
 }
 .In_btn{
     width: 50%;
-    height: 50px;
+    height: 40px;
     border-radius: 30px;
     background-color: #ffa64b;
     color: white;
@@ -664,7 +666,7 @@ ion-badge {
   }
   .order_btn{
     text-align: center;
-    margin-top: 20%;
+    // margin-top: 20%;
   }
   .more_div
   {
@@ -748,6 +750,7 @@ ion-badge {
     text-align: center;
     position: relative;
     display: inline-block;
+    margin-top: 15px;
   }
   .edit_icon{
     font-size: xx-large;
@@ -832,3 +835,40 @@ ion-badge {
         .scroll-item {
         display: inline-block;
         }}  
+
+        .loaderBG {
+        }
+        .loaderBG ion-spinner {
+          height: 50px;
+          width: 50px;
+        }
+        .loaderBG .loading-wrapper {
+          background: none;
+          box-shadow: none;
+        }
+        // .loaderBG circle {
+        //   stroke-dasharray: 153px !important;
+        //   stroke-dashoffset: 80% !important;
+        // }
+        .loaderBG ion-spinner circle {
+          stroke-dasharray: 198px !important;
+        }
+.count {
+    text-align: center;
+    width: 25px;
+}
+
+.no_records{
+    text-align: center;
+    color: #5db8d4;
+    font-size: large;
+}
+.addcart{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 21px;
+    background-color: darkorange;
+}
